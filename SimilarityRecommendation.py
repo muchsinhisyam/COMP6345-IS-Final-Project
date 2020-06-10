@@ -2,7 +2,7 @@ import pandas
 from sklearn.model_selection import train_test_split
 import numpy as np
 import time
-# import Recommenders as Recommenders
+import Recommenders as Recommenders
 
 # Class for Item similarity based Recommender System model
 class similarity_recommender():
@@ -171,10 +171,20 @@ grouped_sum = song_gr['listen_count'].sum()
 song_gr['percentage']  = song_gr['listen_count'].div(grouped_sum)*100
 song_gr.sort_values(['listen_count', 'song'], ascending = [0,1])
 
-# print("Total no of songs:",len(song_df1))
+print("Total no of songs:",len(song_df1))
 u = song_df1['user_id'].unique()
 print("The no. of unique users:", len(u))
 
-# Train data
+#Train data
 train, test_data = train_test_split(song_df1, test_size = 0.20, random_state=0)
 print(train.head(5))
+
+#Create an instance of the class
+pm = Recommenders.popularity_recommender()
+pm.create(train, 'user_id', 'song')
+user_id1 = u[5]
+#Recommended songs list for a user
+pm.recommend(user_id1)
+
+user_id2 = u[8]
+pm.recommend(user_id2)
