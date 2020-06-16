@@ -1,0 +1,51 @@
+Total no of songs: 10000
+The no. of unique users: 365
+                                       user_id  ...                                   song
+7389  94d5bdc37683950e90c56c9b32721edb5d347600  ...          Half Of My Heart - John Mayer
+9275  1012ecfd277b96487ed8357d02fa8326b13696a5  ...  The Beautiful People - Marilyn Manson
+2995  15415fa2745b344bce958967c346f2a89f792f63  ...       Sanctify Yourself - Simple Minds
+5316  ffadf9297a99945c0513cd87939d91d8b602936b  ...       Heart Cooks Brain - Modest Mouse
+356   5a905f000fc1ff3df7ca807d57edb608863db05d  ...                Rorol - Octopus Project
+
+[5 rows x 8 columns]
+------------------------------------------------------------------------------------
+Songs played by first user 4bd88bfb25263a75bbdd467e74018f4ae570e5df:
+------------------------------------------------------------------------------------
+Just Lose It - Eminem
+Without Me - Eminem
+16 Candles - The Crests
+Speechless - Lady GaGa
+Push It - Salt-N-Pepa
+Ghosts 'n' Stuff (Original Instrumental Mix) - Deadmau5
+Say My Name - Destiny's Child
+My Dad's Gone Crazy - Eminem / Hailie Jade
+The Real Slim Shady - Eminem
+Somebody To Love - Justin Bieber
+Forgive Me - Leona Lewis
+Missing You - John Waite
+Ya Nada Queda - Kudai
+----------------------------------------------------------------------
+Similar songs recommended for the first user:
+----------------------------------------------------------------------
+No. of songs for the user: 13
+No. of songs in the list: 4483
+Non zero values in cooccurence_matrix :2097
+------------------------------------------------------------------------------------
+Songs played by second user 9d6f0ead607ac2a6c2460e4d14fb439a146b7dec:
+------------------------------------------------------------------------------------
+Swallowed In The Sea - Coldplay
+Life In Technicolor ii - Coldplay
+Life In Technicolor - Coldplay
+The Scientist - Coldplay
+Trouble - Coldplay
+Strawberry Swing - Coldplay
+Lost! - Coldplay
+Clocks - Coldplay
+----------------------------------------------------------------------
+Similar songs recommended for the second user:
+----------------------------------------------------------------------
+No. of songs for the user: 8
+No. of songs in the list: 4483
+Non zero values in cooccurence_matrix :3429
+no. of unique songs in the set: 4483
+Non zero values in cooccurence_matrix :271
