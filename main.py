@@ -16,7 +16,7 @@ redirect_uri = 'http://google.com/'
 
 # Username & Scope, and Prompt for user permission
 username = ''
-scope = 'user-top-read'
+scope = 'user-top-read user-modify-playback-state user-read-playback-state'
 
 token = util.prompt_for_user_token(username, scope, client_id, client_secret, redirect_uri)
 spotifyObject = spotipy.Spotify(auth=token)
@@ -106,7 +106,8 @@ def get_device_id(device_type):
 
 
 def play_spotify(results):
-    current_market = spotifyObject.current_user()['country']
+    # current_market = spotifyObject.current_user()['country']
+    current_market = 'ID'
     searchResult = spotifyObject.search(results[0][1], type='track', limit=1, market=current_market)
     try:
         track_uri = searchResult['tracks']['items'][0]['uri']
@@ -161,7 +162,29 @@ while True:
         for result in results:
             print(it, result[1])
             it += 1
-        play_spotify(results)
+
+        current_market = 'ID'
+        searchResult = spotifyObject.search(results[0][1], type='track', limit=1, market=current_market)
+        try:
+            track_uri = searchResult['tracks']['items'][0]['uri']
+        except IndexError:
+            print()
+            print("Song is not available on spotify")
+            continue
+
+        device_id = get_device_id("Computer")
+        if (device_id == 1) or (device_id == 2):
+            print()
+            print("Can't play song since Spotify is inactive.")
+            continue
+
+        data = {'uris': [track_uri]}
+        url = 'me/player/play?device_id=' + device_id
+        # url = 'me/player/play'
+        spotifyObject._put(url, payload=data)
+
+        print()
+        print("Playing " + results[0][1] + ' on spotify')
 
     else:
         sys.exit(0)
