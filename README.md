@@ -13,20 +13,20 @@ Group members (L4AC/Group 8):
 We build a music recommendation system using Python Machine Learning based on user's input, user's Spotify preferences data (e.g. user's most played song on Spotify), or most popular songs on the datasets. After the system recommend
 
 ## Packages and Libraries used
-###- Numpy:
+- ### Numpy:
 Numpy is a Python library used for working with arrays. It also has functions for working in domain of linear algebra, fourier transform, and matrices.
-###- Pandas:
+- ### Pandas:
 Pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language.
-###- Sklearn:
+- ### Sklearn:
 Sklearn is a set of python modules for machine learning and data mining.
-###- Spotipy:
+- ### Spotipy:
 Spotipy is an API Library of Spotify app.
 
 ## Algorithms used:
 
-###- Content-Based Recommendation Systems (CBRS)
+- ### Content-Based Recommendation Systems (CBRS)
 Content-Based Recommendation Systems is a method or algorithm recommends items based on its features and the similarity between elements of other items. Assume a user has already seen a movie from the genre of Comedy, CBRS will recommend movies that also belong to the Comedy genre.
-###-Collaborative-Filtering Recommendation System (CFRS)
+- ### Collaborative-Filtering Recommendation System (CFRS)
 Collaborative-Filtering Recommendation System is a method or algorithm recommends items similar to what the user has already chosen. We are going to use the Pearson Correlation to calculate the relationship between similar tracks.
 
 
